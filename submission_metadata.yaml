@@ -24,7 +24,7 @@ team_members:
 # Code and reproducibility
 # ============================================================================
 github_repo: "https://github.com/siddhimeh/binaryminds-ranker"
-sandbox_link: "https://huggingface.co/spaces/AkarshMehrotra/redrob-ranker"
+sandbox_link: "https://binaryminds-ranker-2f2vcgplnj8eqn39hjxxrw.streamlit.app/"
 reproduce_command: "python src/ranker.py"
 
 # ============================================================================
