@@ -1,0 +1,74 @@
+# Redrob Hackathon — Submission Metadata for BinaryMinds
+#
+# Filled in from the template and placed at repo root.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "BinaryMinds"
+
+primary_contact:
+  name: "Siddhi Mehrotra"
+  email: "siddhi5mehrotra@gmail.com"
+  phone: "+91-7395083747"
+
+team_members:
+  - name: "Siddhi Mehrotra"
+    email: "siddhi5mehrotra@gmail.com"
+    role: "ML Engineer"
+  - name: "Riddhi Mehrotra"
+    email: "riddhi5mehrotra@gmail.com"
+    role: "Data Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/siddhimeh/binaryminds-ranker.git"
+sandbox_link: "https://huggingface.co/spaces/AkarshMehrotra/redrob-ranker"
+reproduce_command: "python src/ranker.py"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.13.7"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+  - "Other"
+
+ai_usage_summary: |
+  Used Gemini as an agentic pair-programming assistant to build, test, and package the solution.
+  No candidate data was shared with external APIs during the evaluation and scoring steps.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Rule-based candidate ranking system with explicit honeypot filtering to remove invalid profiles.
+  Extracted normalized numeric features for skills match, experience, seniority, behavioral signals, 
+  and availability in a streamed processing pipeline (chunks of 5,000) to keep RAM footprint low, 
+  maintaining a running shortlist of the top 2,000. Computed cosine similarities on candidate text blocks
+  (summary + career descriptions) using sentence-transformers model 'all-MiniLM-L6-v2' on CPU and completed
+  re-scoring. Down-weighted consulting-firm-only profiles to align with JD preferences. Total runtime is ~152 seconds.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

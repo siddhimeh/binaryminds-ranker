@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+__MACOSX/
+*.jsonl
+*.gz
+.env
+submission_spec.docx
+redrob_signlas_doc.docx
+validate_submission.py
+sample_submission.csv
